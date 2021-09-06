@@ -51,6 +51,6 @@ namespace ArtikelLager
                 return this.ID.CompareTo(comparePart.ID);
         }
 
-       
+      
     }
 }
