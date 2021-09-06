@@ -39,7 +39,7 @@ namespace ArtikelLager
             while (isNumericInt == false)
             {
 
-                Console.Write("ID:  \n");
+                Console.Write("ID: \n");
                 
 
                 try
@@ -67,9 +67,9 @@ namespace ArtikelLager
                 }
             }
 
-            Console.Write("Name:  \n");
+            Console.Write("Name: \n");
             string name = Console.ReadLine();
-            Console.Write("Country:  \n");
+            Console.Write("Country: \n");
             string country = Console.ReadLine();
 
             // make sure that the entry is Numeric
@@ -471,7 +471,7 @@ namespace ArtikelLager
                 }
                 Console.Clear();
 
-                // So long optinons unequal with 4 Clear the Console and Show new to set another selection
+                // So long optinons unequal with 7 Clear the Console and Show new to set another selection
             } while (options != "7");
 
             
