@@ -24,7 +24,7 @@ namespace ArtikelLager
         }
         //Methods
       
-        void ADDItem()
+        private void ADDItem()
         {
             bool isNumericInt = false;
             bool isNumericDouble = false;
@@ -55,11 +55,6 @@ namespace ArtikelLager
                         isNumericInt = false;
                        
                     }
-                    
-                   
-                    
-
-                    
                 }
                 catch (FormatException)
                 {
@@ -120,7 +115,8 @@ namespace ArtikelLager
 
         }
 
-        void ShowList()
+
+        private void ShowList()
         {
             ReadList();
             //If the List is not Empty Sort by ID, else write that the list is Empty
@@ -131,12 +127,10 @@ namespace ArtikelLager
                 GetList();
                 RemoveFromList();
             }
-                
-           
-            
-
         }
-        void GetList()
+
+
+        private void GetList()
         {
             //Show the List to Console.
             foreach (ItemsProperties aItem in items)
@@ -148,7 +142,9 @@ namespace ArtikelLager
           
             
         }
-        void SortListByName()
+
+
+        private void SortListByName()
         {
             ReadList();
             //If the List is not Empty Sort by Name, else write that the list is Empty
@@ -173,7 +169,8 @@ namespace ArtikelLager
             
         }
       
-        private  bool DoubleID(int id)
+
+        private bool DoubleID(int id)
         {
 
             bool hit = false;
@@ -194,7 +191,8 @@ namespace ArtikelLager
                 return false;
 
         }
-        void SortListByCountry()
+
+        private void SortListByCountry()
         {
             ReadList();
             //If the List is not Empty Sort by Country, else write that the list is Empty
@@ -218,8 +216,9 @@ namespace ArtikelLager
                 RemoveFromList();
             }
         }
+
        
-        void SortListByPrice()
+        private void SortListByPrice()
         {
             ReadList();
             //If the List is not Empty Sort by Price, else write that the list is Empty
@@ -238,7 +237,9 @@ namespace ArtikelLager
            
 
         }
-        void SortByCurrency()
+
+
+        private void SortByCurrency()
         {
             ReadList();
             //If the List is not Empty Sort by Currency, else write that the list is Empty
@@ -263,8 +264,9 @@ namespace ArtikelLager
             }
            
         }
+
        
-        void RemoveFromList()
+        private void RemoveFromList()
         {
             bool isNumeric = false;
             int _id = 0;
@@ -321,10 +323,7 @@ namespace ArtikelLager
                                     {
                                         newFile.WriteLine(aItem);
                                     }
-
-
-
-                                };
+                                 };
                                 ReadList();
 
                                 GetList();
@@ -348,8 +347,10 @@ namespace ArtikelLager
             }
            
         }
-        void ReadList()
-    {
+
+
+        private void ReadList()
+        {
            
             if (File.Exists(@".\files.txt"))
             {
@@ -389,8 +390,6 @@ namespace ArtikelLager
                                 _Price = rows.Split(':', ' ');
                                 count++;
                                 break;
-
-
                         }
 
                        
